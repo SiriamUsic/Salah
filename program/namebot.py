@@ -15,11 +15,11 @@ from config import (
 @Client.on_message(filters.command(BOT_NAME))
 def reply_to_timo(Client, message):
     message.reply_text(
-        f"""**اي قلبي 🤍😻**""",
+        f"""**نعم ي قلبي 🤍😻**""",
         reply_markup=InlineKeyboardMarkup(
             [
             [
-                InlineKeyboardButton("Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("Salah Hemdan", url=f"https://t.me/BK_ZT"),
             ]
          ]
      )
@@ -33,7 +33,7 @@ async def nammes(client: Client, message: Message):
     name = usr.first_name
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""اسمي {BOT_NAME} الكيوت 🌝♥️""",
+        caption=f"""اسمي {BOT_NAME} يبن العاميه""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -41,7 +41,7 @@ async def nammes(client: Client, message: Message):
                         name, url=f"https://t.me/{message.from_user.username}")
                 ],
                 [
-                    InlineKeyboardButton("اصنع بوتك", url=f"https://t.me/EITHON1/819"),
+                    InlineKeyboardButton("Salah Hemdan ", url=f"https://t.me/BK_ZT"),
                 ],    
             ]
         ),

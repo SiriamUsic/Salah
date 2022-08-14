@@ -62,12 +62,14 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""✨ **مرحبا عزيزي » {message.from_user.mention()} !**\n
-💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
+        caption=f"""**مرحبا عزيزي » {message.from_user.mention()} !**\n
+⌯ **انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
 
-᥀︙ لمعرفة اوامر هذا البوت اضغط على » اوامر التشغيل!
+⌯ لمعرفة اوامر هذا البوت 
+اضغط على » اوامر التشغيل!
 
-᥀︙ لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!
+⌯ لمعرفة طريقة تشغيل هذا البوت 
+اضغط على » طريقة التشغيل!
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -77,19 +79,19 @@ async def start_(client: Client, message: Message):
                     ],
                 [
                     InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("️المطور", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ كروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ جروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/EITHON1"
+                        "‹ قناة السورس ›", url=f"https://t.me/cr_t2"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "اضـف البـوت لمجمـوعتـك ✅",
+                        "ضيف البوت لمجموعتك ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
@@ -101,20 +103,20 @@ async def start_(client: Client, message: Message):
 @Client.on_message(command(["مبرمج السورس", f"ؤمن", f"ورس", f"السورس"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/8efbe93b81985bb648d95.jpg",
-        caption=f"""Programmer [EITHON](https://t.me/EITHON1) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
+        photo=f"https://telegra.ph/file/1071f2f3f5731535252ff.jpg",
+        caption=f"""Programmer [Siria](https://t.me/cr_t2) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("Source Siria", url=f"https://t.me/CR_T2"),
             ],
             [
                 InlineKeyboardButton(
-                    "-محمد .", url=f"https://t.me/M_Z_Z_N"
+                    "Salah Hemdan", url=f"https://t.me/BK_ZT"
                 ),
             ],
             [
-                InlineKeyboardButton("♡اضف البوت الى مجموعتك♡", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                InlineKeyboardButton("ضيف البوت لمجموعتك ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
             ]
          ]
      )
@@ -128,7 +130,7 @@ async def help(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("𓌹℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("Salah Hemdan", url=f"https://t.me/BK_ZT"),
             ],
             [
                 InlineKeyboardButton(
@@ -136,7 +138,7 @@ async def help(client: Client, message: Message):
                 ),
             ],
             [
-                InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                InlineKeyboardButton("ضيف البوت لمجموعتك ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
             ]
          ]
      )
@@ -153,9 +155,9 @@ async def shadow(c: Client, message: Message):
 @Client.on_message(command(["/ping", f"بنك"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("pinging...")
+    m_reply = await message.reply_text("جاري قياس سرعة النت...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("📈 `بينج البوت`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["فحص", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -164,9 +166,9 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "حالة البوت :\n"
+        f"• **وقت التشغيل :**\n `{uptime}`\n"
+        f"• **وقت البدء :**\n `{START_TIME_ISO}`"
     )
 
 
@@ -194,12 +196,12 @@ async def new_chat(c: Client, m: Message):
         if member.id == bot_id:
             return await m.reply(
                 "❤️ **شكرا لإضافتي إلى المجموعة !**\n\n"
-                "قم بترقيتي كمسؤول عن المجموعة لكي أتمكن من العمل بشكل صحيح\nولا تنسى كتابة `/انضم` لدعوة الحساب المساعد\nقم بكتابة`/تحديث` لتحديث قائمة المشرفين",
+                "قم بترقيتي كمشرف عن المجموعة لكي أتمكن من العمل بشكل صحيح\nولا تنسى كتابة `انضم` لدعوة الحساب المساعد\nقم بكتابة `تحديث` لتحديث قائمة المشرفين",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton("‹ قناة البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("‹ جروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
                             InlineKeyboardButton(
@@ -207,7 +209,7 @@ async def new_chat(c: Client, m: Message):
                         ],
                         [
                             InlineKeyboardButton(
-                        "♡اضـف الـبـوت لـمـجـمـوعـتـك♡",
+                        "ضيف البوت لمجموعتك ➕",
                         url=f'https://t.me/{BOT_USERNAME}?startgroup=true'),
                         ],
                     ]

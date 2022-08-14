@@ -19,12 +19,14 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.answer("الصفحه الرئيسيه")
     await query.edit_message_text(
-        f"""✨ **مرحبا عزيزي »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
-💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
+        f"""**مرحبا عزيزي »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
+⌯ **انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
 
-᥀︙ لمعرفة اوامر هذا البوت اضغط على » ‹الاوامر الاساسية›!
+⌯ لمعرفة اوامر هذا البوت 
+اضغط على » الاوامر الاساسية
 
-᥀︙ لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!
+⌯ لمعرفة طريقة تشغيل هذا البوت 
+اضغط على » طريقة التشغيل
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -33,19 +35,19 @@ async def cbstart(_, query: CallbackQuery):
                     ],
                 [
                     InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ جروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/EITHON1"
+                        "‹ قناة السورس ›", url=f"https://t.me/Ahmadnnnnmm"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ضيـف البـوت لمجمـوعتـك ✅",
+                        "ضيف البوت لمجموعتك ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
@@ -69,7 +71,7 @@ async def cbguides(_, query: CallbackQuery):
  6 ↤ في بعض الأحيان ، يمكن أن تساعدك إعادة تحميل البوت باستخدام الأمر /reload في إصلاح بعض المشكلات
  📌 إذا لم ينضم البوت إلى المكالمة ، فتأكد من تشغيل المكالمة  بالفعل ، أو اكتب /userbotleave ثم اكتب /userbotjoin مرة أخرى
 
- 💡 إذا كانت لديك أسئلة  حول هذا البوت ، فيمكنك إخبارنا منن خلال قروب الدعم الخاصة بي هنا ↤ @{GROUP_SUPPORT}
+ ⌯ إذا كانت لديك أسئلة  حول هذا البوت ، فيمكنك إخبارنا منن خلال جروب الدعم الخاصة بي هنا ↤ @{GROUP_SUPPORT}
 
 ⚡ قناة البوت @{UPDATES_CHANNEL}
 """,
@@ -89,10 +91,10 @@ async def cbcmds(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 اوامر الادمنيه", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 اوامر المطور", callback_data="cbsudo"),
+                    InlineKeyboardButton(" اوامر الادمنيه", callback_data="cbadmin"),
+                    InlineKeyboardButton(" اوامر المطور", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 اوامر اساسيه", callback_data="cbbasic")
+                    InlineKeyboardButton(" اوامر اساسيه", callback_data="cbbasic")
                 ],[
                     InlineKeyboardButton("🔙 رجوع", callback_data="cbstart")
                 ],
@@ -105,7 +107,7 @@ async def cbcmds(_, query: CallbackQuery):
 async def cbbasic(_, query: CallbackQuery):
     await query.answer("الاوامر الاساسيه")
     await query.edit_message_text(
-        f"""🏮 الاوامر الاساسيه:
+        f"""⌯ الاوامر الاساسيه:
 
 » /play +「اسم الأغنية / رابط」لتشغيل اغنيه في المحادثه الصوتيه
 » /vplay +「اسم الفيديو / رابط 」 لتشغيل الفيديو داخل المكالمة
@@ -130,7 +132,7 @@ async def cbbasic(_, query: CallbackQuery):
 async def cbadmin(_, query: CallbackQuery):
     await query.answer("اوامر الادمنيه")
     await query.edit_message_text(
-        f"""🏮 هنا أوامر الادمنيه:
+        f"""⌯ هنا أوامر الادمنيه:
 
 » /pause 「ايقاف التشغيل موقتآ」
 » /resume 「استئناف التشغيل」
@@ -151,7 +153,7 @@ async def cbadmin(_, query: CallbackQuery):
 async def cbsudo(_, query: CallbackQuery):
     await query.answer("اوامر المطور")
     await query.edit_message_text(
-        f"""🏮 هنا اوامر المطور:
+        f"""⌯ هنا اوامر المطور:
 
 » /rmw「لحذف جميع الملفات 」
 » /rmd「حذف جميع الملفات المحمله」
@@ -171,7 +173,7 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbmenu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("⌯ المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
@@ -189,5 +191,5 @@ async def cbmenu(_, query: CallbackQuery):
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("⌯ المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
     await query.message.delete()
