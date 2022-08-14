@@ -1,7 +1,7 @@
 {
-    "name": "Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون",
+    "name": "Salah Hemdan",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by PyTgCalls and Pyrogram",
-    "logo": "https://telegra.ph/file/e9258f1ae714616d2cdbb.jpg",
+    "logo": "https://telegra.ph/file/1071f2f3f5731535252ff.jpg",
     "keywords": [
         "py-tgcalls",
         "telegram bot",
@@ -11,9 +11,9 @@
         "mongodb",
         "pyrogram"
     ],
-    "website": "https://t.me/EITHON1",
-    "repository": "https://github.com/pqnzbmmwQ92/ll",
-    "success_url": "https://t.me/EITHMU1",
+    "website": "https://t.me/BK_ZT",
+    "repository": "https://github.com/SiriamUsic/Salah",
+    "success_url": "https://t.me/bajwkk",
     "env": {
         "API_ID": {
             "description": "قم بوضع الايبي ايدي هنا",
@@ -86,7 +86,7 @@
         "UPSTREAM_REPO": {
             "description": "اتركه كما هوا",
             "required": true,
-            "value": "https://github.com/pqnzbmmwQ92/ll"
+            "value": "https://github.com/SiriamUsic/Salah"
         }
     },
     "addons": [],
