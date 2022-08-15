@@ -81,7 +81,7 @@
         "MONGODB_URL": {
             "description": "لا تغيره!",
             "required": true,
-            "value": "mongodb+srv://lucifer:ASShaw96@lucifer.vuows.mongodb.net/lucifer?retryWrites=true&w=majority"
+            "value": "mongodb+srv://SalahSiria:retal2310@cluster0.pxxkny9.mongodb.net/?retryWrites=true&w=majority"
         },
         "UPSTREAM_REPO": {
             "description": "اتركه كما هوا",
